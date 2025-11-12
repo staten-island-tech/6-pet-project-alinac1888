@@ -9,3 +9,6 @@ class pet:
         print(self.inventory)
 
 usagi = pet("usagi", 2000000000000000, ["cheeseburger, hamburger, big mac, whopper"])
+
+usagi.buy({"title": "pitchfork", "atk": 6000})
+print(usagi.__dict__)
