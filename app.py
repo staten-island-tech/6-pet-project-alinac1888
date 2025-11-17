@@ -10,5 +10,6 @@ class pet:
 
 usagi = pet("usagi", 2000000000000000, ["cheeseburger, hamburger, big mac, whopper, pibbl"])
 
-usagi.buy({"title": "rod", "atk": 6000})
+usagi.buy({"rod", "atk": 6000})
 print(usagi.__dict__)
+
