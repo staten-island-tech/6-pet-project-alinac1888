@@ -10,7 +10,7 @@ class pet:
         print(self.inventory)
     
     def starvation(self, item):
-        self.hunger(1)
+        self.hunger()
 
 usagi = pet("usagi", 2000000000000000, ["cheeseburger, hamburger, big mac, whopper, pibbl"], 100)
 print(usagi.__dict__)
