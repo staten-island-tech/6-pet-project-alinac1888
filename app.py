@@ -9,10 +9,11 @@ class pet:
         self.inventory.append(item)
         print(self.inventory)
     
-    def starvation(self, item):
-        self.hunger()
+    def starvation(self, eat):
+        self.hunger += eat
+        print(f"{self.name} has ")
 
-usagi = pet("usagi", 2000000000000000, ["cheeseburger, hamburger, big mac, whopper, pibbl"], 100)
+usagi = pet("usagi", 2000000000000000, ["cheeseburger, hamburger, big mac, whopper, pibbl"], 1000)
 print(usagi.__dict__)
 
 usagi.buy({"title": "rod", "atk": 6000})
