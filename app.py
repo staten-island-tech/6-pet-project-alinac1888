@@ -6,6 +6,7 @@ class pet:
         self.happiness = happy
         self.hunger = hunger
         hunger = 50
+        happy = 50
         self.living = True
 
     def buy(self, item):
@@ -34,7 +35,7 @@ class pet:
                 print(f"{self.name} is hungry, hunger is at {self.hunger}")
                 happiness -= 1
             elif self.hunger > 100 and self.hunger <= 130:
-                hunger = 100
+                self.hunger = 100
                 print(f"{self.name} is overfed, hunger is at {self.hunger}")
             elif self.hunger > 130:
                 print(f"{self.name} DEAD")
@@ -47,8 +48,10 @@ class pet:
         while self.living == True:
             eat = input(f"Feed {self.name}")
             if eat in self.inventory:
-                hunger += 10
-            if eat not in self.inventory:
+                self.hunger += 10
+                print(f"{self.name} is now at {self.hunger}%")
+                break
+            else:
                 print(f"food not found in {self.name}'s inventory")
         if self.living == False:
             print(f"{self.name} is dead")
@@ -57,7 +60,7 @@ class pet:
         print(self.__dict__)
         print(f"hunger bar:{self.starve}")
 
-usagi = pet("usagi", 2000000000000000, ["cheeseburger", "hamburger", "big mac", "whopper", "pibbl", "lemons"], 50, 50)
+usagi = pet("usagi", 2000000000000000, ["cheeseburger", "hamburger", "big mac", "whopper", "pibbl", "lemons"], 50, 50, True)
 
 usagi.stats()
 usagi.feed("lemons")
