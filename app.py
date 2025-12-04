@@ -25,11 +25,7 @@ class pet:
                 print(f"{self.name} filler, happiness is at {self.happiness}") 
             else:
                 print(f"sad {self.name}")
-                self.living = False
-
-    def happies(self, play):
-        while self.living == True:
-            
+                self.living = False   
 
     def starve(self):
         if self.hunger >= 50 and self.hunger <= 100:
@@ -56,8 +52,19 @@ class pet:
     def stats(self):
         print(self.__dict__)
 
-usagi = pet("usagi", 2000000000000000, ["cheeseburger", "hamburger", "big mac", "whopper", "pibbl",], 50, 50, True)
+    def gameshhssjsa(self, choice):
+      while self.living == True:
+        for i in pet:
+            if choice == i:
+                print("test")
+    gameshhssjsa()
+
+
+usagi = pet("usagi", 2000000000000000, ["cheeseburger", "hamburger", "big mac", "whopper", "pibbl"], 50, 50, True)
 
 usagi.stats()
-game = input("what woulf u do wityh ur pet first")
+usagi.gameshhssjsa()
+
+
+    
     
