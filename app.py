@@ -53,17 +53,44 @@ class pet:
         print(self.__dict__)
 
     def gameshhssjsa(self, choice):
-      while self.living == True:
-        for i in pet:
-            if choice == i:
-                print("test")
-    gameshhssjsa()
+        while self.living == True:
+            if choice == "feed":
+                self.feed(eat = input("what to eat"))
+                upstats = input("Do you want current stats? Y/N")
+                if upstats == "Y":
+                        print(self.__dict__)
+                        self.gameshhssjsa(choice = input("What else do you want to do?"))
+                elif upstats == "N":
+                        self.gameshhssjsa(choice = input("What else do you want to do?"))
+                else:
+                     print("invalid option, please try again")
+                     self.gameshhssjsa(choice = input("What else do you want to do?"))
+                break
+            elif choice == "buy":
+                self.buy(item = input("what to buy"))
+                upstats = input("Do you want current stats? Y/N")
+                if upstats == "Y":
+                    print(self.__dict__)
+                    self.gameshhssjsa(choice = input("What else do you want to do?")) 
+                elif upstats == "N":
+                    self.gameshhssjsa(choice = input("What else do you want to do?"))
+                else:
+                    print("invalid option, please try again")
+                    self.gameshhssjsa(choice = input("What else do you want to do?"))
+                break
+            else:
+                print("invalid option, please try again")
+                self.gameshhssjsa(choice = input("what do you want to do"))
+                break
+        while self.living == False:
+             print("dead")
+             break
 
 
 usagi = pet("usagi", 2000000000000000, ["cheeseburger", "hamburger", "big mac", "whopper", "pibbl"], 50, 50, True)
 
 usagi.stats()
-usagi.gameshhssjsa()
+usagi.gameshhssjsa(choice = input("what do you want to do"))
 
 
     
